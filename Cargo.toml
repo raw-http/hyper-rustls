@@ -10,8 +10,8 @@ homepage = "https://github.com/ctz/hyper-rustls"
 repository = "https://github.com/ctz/hyper-rustls"
 
 [dependencies]
-http = "0.2"
-hyper = { version = "0.14", default-features = false, features = ["client"] }
+http = { git = "https://github.com/raw-http/http" }
+hyper = { git = "https://github.com/raw-http/hyper", default-features = false, features = ["client"] }
 log = { version = "0.4.4", optional = true }
 rustls-native-certs = { version = "0.6", optional = true }
 rustls = { version = "0.20.1", default-features = false }
@@ -21,7 +21,7 @@ webpki-roots = { version = "0.22", optional = true }
 
 [dev-dependencies]
 futures-util = { version = "0.3.1", default-features = false }
-hyper = { version = "0.14", features = ["full"] }
+hyper = { git = "https://github.com/raw-http/hyper", features = ["full"] }
 rustls = { version = "0.20.1", default-features = false, features = ["tls12"] }
 rustls-pemfile = "1.0.0"
 tokio = { version = "1.0", features = ["io-std", "macros", "net", "rt-multi-thread"] }
